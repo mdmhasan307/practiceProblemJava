@@ -41,16 +41,31 @@ public class SingleNumber_136 {
     }
 
     public static int singleNumber(int[] nums){
-       Map<Integer, Integer> map= new HashMap<>();
-       int singleNumber=0;
-       for(int i: nums){
-           map.put(i, map.getOrDefault(i,0)+1);
-       }
-       for(int i=0;i<nums.length;i++){
-           if(map.get(nums[i])==1){
-               singleNumber=  nums[i];
-           }
-       }
-       return singleNumber;
+//       Map<Integer, Integer> map= new HashMap<>();
+//       int singleNumber=0;
+//       for(int i: nums){
+//           map.put(i, map.getOrDefault(i,0)+1);
+//       }
+//       for(int i=0;i<nums.length;i++){
+//           if(map.get(nums[i])==1){
+//               singleNumber=  nums[i];
+//           }
+//       }
+//       return singleNumber;
+        Arrays.sort(nums);
+        int i=0;
+        int end=nums.length-1;
+        int singleNumber=0;
+        if(nums[end]!=nums[end-1]){
+            singleNumber=nums[end];
+        }
+        while(i<(end-1)){
+            if(nums[i+1]!=nums[i]){
+                singleNumber=nums[i];
+            }
+            i=i+2;
+        }
+
+        return singleNumber;
     }
 }
