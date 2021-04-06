@@ -38,6 +38,7 @@ public class StreamLamdaPractice {
        person.add( new Person("Hasan", 33, "male"));
        person.add( new Person("Ms", 29, "female"));
        person.add( new Person("Jhon", 37, "male"));
+       person.add( new Person("Jhon", 37, "male"));
        person.add( new Person("Kiara", 25, "female"));
 
        return person;
