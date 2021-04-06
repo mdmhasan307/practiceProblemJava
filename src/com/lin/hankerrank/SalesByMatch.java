@@ -49,8 +49,7 @@ import java.util.Scanner;
 
 public class SalesByMatch {
 
-    private static  Scanner scanner;
-
+    private static Scanner scanner;
     static {
         try {
             scanner = new Scanner(new File("../Public/match.txt"));
@@ -99,7 +98,7 @@ public class SalesByMatch {
              }
 
         }
-       // System.out.println(pairNum);
+        System.out.println(pairNum);
 
 
         return pairNum;
