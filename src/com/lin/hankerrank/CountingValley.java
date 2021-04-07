@@ -66,6 +66,9 @@ public class CountingValley {
 
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("../Public/OUTPUT_PATH"));
         int steps = scanner.nextInt();
+        if(steps<2||steps>1000000){
+            System.out.println("Too many steps");
+        }
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
         String paths = scanner.nextLine();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
@@ -85,6 +88,10 @@ public class CountingValley {
         int count=0;
 
         for(int i=0;i<steps;i++){
+            if(path.charAt(i)!='U'|| path.charAt(i)!='D'){
+                System.out.println("Invalid character");
+                break;
+            }
             if(path.charAt(i)=='U'){
                 count++;
             }
